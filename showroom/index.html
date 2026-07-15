@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSVCHUNK - Brutalist Design Showroom</title>
+    <!-- Link to the standalone CSS Framework -->
+    <link rel="stylesheet" href="sbrutalist.css">
+    <style>
+        /* Small styling just for the presentation layout */
+        .component-section {
+            border-bottom: 2px dashed #000;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+        .code-block {
+            background-color: #000;
+            color: #00C853;
+            padding: 16px;
+            font-family: monospace;
+            font-weight: bold;
+            display: block;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sbrutalist-container">
+        
+        <h1 class="sbrutalist-h1">Design Showroom</h1>
+        <p class="sbrutalist-p">This page demonstrates the standalone <strong>sbrutalist.css</strong> framework. It shows all core UI components of the CSVCHUNK design language in action without relying on external libraries like Bulma.</p>
+        
+        <div class="component-section">
+            <h2 class="sbrutalist-h2">1. Typography & Badges</h2>
+            <h1 class="sbrutalist-h1">This is an H1 Header <span class="sbrutalist-badge-pro">PRO</span></h1>
+            <p class="sbrutalist-p">This is standard paragraph text. It's bold enough to be highly legible but not as heavy as the headers. High contrast is key.</p>
+        </div>
+
+        <div class="component-section">
+            <h2 class="sbrutalist-h2">2. The Brutalist Box</h2>
+            <div class="sbrutalist-box">
+                <h2 class="sbrutalist-h2">Container Element</h2>
+                <p class="sbrutalist-p">Notice the thick black borders and the hard, solid black drop shadow. No blur radius is used anywhere in this design.</p>
+            </div>
+        </div>
+
+        <div class="component-section">
+            <h2 class="sbrutalist-h2">3. Buttons & Interaction</h2>
+            <p class="sbrutalist-p">Hover over these buttons to see the mechanical "push" effect and color inversion.</p>
+            <button class="sbrutalist-btn-primary">Primary Action</button>
+            <button class="sbrutalist-btn-secondary" style="margin-left: 10px;">Secondary Action</button>
+        </div>
+
+        <div class="component-section">
+            <h2 class="sbrutalist-h2">4. Forms & Inputs</h2>
+            <label class="sbrutalist-label">Username <span class="sbrutalist-badge-pro">PRO</span></label>
+            <input type="text" class="sbrutalist-input" placeholder="Enter your username...">
+            
+            <label class="sbrutalist-label">Select Option</label>
+            <select class="sbrutalist-input">
+                <option>Option 1 - Row Count</option>
+                <option>Option 2 - File Size</option>
+            </select>
+        </div>
+
+        <div class="component-section">
+            <h2 class="sbrutalist-h2">5. Dropzone</h2>
+            <div class="sbrutalist-dropzone">
+                Drag & Drop CSV File Here
+                <div style="font-size: 0.8rem; margin-top: 10px; font-weight: 500;">Or click to browse</div>
+            </div>
+        </div>
+
+        <div class="component-section">
+            <h2 class="sbrutalist-h2">6. Alerts</h2>
+            <div class="sbrutalist-alert-danger">
+                Warning: The uploaded file exceeds the 500 MB limit of the free tier.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

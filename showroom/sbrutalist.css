@@ -1,0 +1,180 @@
+/* CSVCHUNK Brutalist CSS Framework */
+
+:root {
+    --bg-body: #ffffff;
+    --text-main: #000000;
+    --color-primary: #00C853; /* Green */
+    --color-warning: #FFD600; /* Yellow */
+    --color-danger: #FF3860;  /* Red */
+    --border-width: 2px;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Typography */
+.sbrutalist-h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+    color: var(--text-main);
+}
+
+.sbrutalist-h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5em;
+    color: var(--text-main);
+}
+
+.sbrutalist-p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+
+.sbrutalist-label {
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Layout Elements */
+.sbrutalist-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.sbrutalist-box {
+    background-color: #ffffff;
+    color: #000000;
+    border: var(--border-width) solid #000000;
+    box-shadow: 6px 6px 0px #000000;
+    border-radius: 0;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+/* Buttons */
+.sbrutalist-btn-primary, .sbrutalist-btn-secondary {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border: var(--border-width) solid #000000;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 4px 4px 0px #000000;
+    cursor: pointer;
+    transition: all 0.15s ease-out;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sbrutalist-btn-primary {
+    background-color: var(--color-primary);
+    color: #000000;
+}
+
+.sbrutalist-btn-primary:hover {
+    background-color: #000000;
+    color: var(--color-primary);
+    box-shadow: 0px 0px 0px #000000;
+    transform: translate(4px, 4px);
+}
+
+.sbrutalist-btn-secondary {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.sbrutalist-btn-secondary:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0px 0px 0px #000000;
+    transform: translate(4px, 4px);
+}
+
+/* Forms */
+.sbrutalist-input {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff;
+    color: #000000;
+    border: var(--border-width) solid #000000;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.sbrutalist-input:hover {
+    background-color: #f0f0f0;
+}
+
+.sbrutalist-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    background-color: #ffffff;
+}
+
+.sbrutalist-dropzone {
+    border: 3px dashed #000000;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    margin-bottom: 24px;
+}
+
+.sbrutalist-dropzone:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-style: solid;
+}
+
+/* Badges & Alerts */
+.sbrutalist-badge-pro {
+    background-color: var(--color-warning);
+    color: #000000;
+    padding: 2px 6px;
+    border: 1px solid #000000;
+    font-size: 0.7em;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    vertical-align: super;
+    margin-left: 8px;
+}
+
+.sbrutalist-alert-danger {
+    background-color: var(--color-danger);
+    color: #000000;
+    border: var(--border-width) solid #000000;
+    padding: 16px;
+    font-weight: 800;
+    box-shadow: 4px 4px 0px #000000;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
