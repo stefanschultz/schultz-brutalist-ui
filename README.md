@@ -179,6 +179,31 @@ Here is how you build the core elements in CSS/HTML. Copy and paste these to ens
 }
 ```
 
+### 8. Responsive Grid Layouts
+**Effect:** 2-column or 3-column layouts on desktop screens that automatically collapse into a single column on viewports under 768px.
+```css
+.sbrutalist-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 32px;
+}
+
+.sbrutalist-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .sbrutalist-grid-2,
+    .sbrutalist-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+```
+
 ---
 
 ## 🚀 Quick Start / Project Setup

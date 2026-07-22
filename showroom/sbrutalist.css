@@ -68,6 +68,33 @@ body {
     margin-bottom: 32px;
 }
 
+/* Grid Layouts */
+.sbrutalist-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 32px;
+}
+
+.sbrutalist-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 32px;
+}
+
+.sbrutalist-grid-2 > .sbrutalist-box,
+.sbrutalist-grid-3 > .sbrutalist-box {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .sbrutalist-grid-2,
+    .sbrutalist-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Buttons */
 .sbrutalist-btn-primary, .sbrutalist-btn-secondary {
     display: inline-block;
