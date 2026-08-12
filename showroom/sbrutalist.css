@@ -205,3 +205,26 @@ body {
     margin-bottom: 24px;
     text-transform: uppercase;
 }
+
+/* Responsive Grid Section */
+.sbrutalist-grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .sbrutalist-h1 {
+        font-size: 2.2rem;
+    }
+    .sbrutalist-h2 {
+        font-size: 1.8rem;
+    }
+    .sbrutalist-box {
+        padding: 20px;
+    }
+    .sbrutalist-grid-responsive {
+        gap: 2rem;
+    }
+}
