@@ -3,95 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSVCHUNK - Brutalist Design Showroom</title>
+    <title>Schultz Brutalist UI — Design Showroom & Principles</title>
     <!-- Link to the standalone CSS Framework -->
-    <link rel="stylesheet" href="sbrutalist.css?v=3">
+    <link rel="stylesheet" href="sbrutalist.css?v=4">
     <style>
-        /* Small styling just for the presentation layout */
         .component-section {
-            border-bottom: 2px dashed #000;
-            padding-bottom: 40px;
-            margin-bottom: 40px;
+            border-bottom: 2px dashed #000000;
+            padding-bottom: 48px;
+            margin-bottom: 48px;
         }
         .code-block {
-            background-color: #000;
+            background-color: #050505;
             color: #00C853;
             padding: 16px;
-            font-family: monospace;
-            font-weight: bold;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9rem;
             display: block;
             margin-top: 16px;
+            border: 2px solid #000000;
+            overflow-x: auto;
+        }
+        .principle-tag {
+            font-family: ui-monospace, monospace;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
         }
     </style>
 </head>
-<body>
+<body class="sbrutalist-blueprint-bg">
 
-    <div class="sbrutalist-container">
+    <div class="sbrutalist-container" style="max-width: 960px;">
         
-        <h1 class="sbrutalist-h1">Design Showroom</h1>
-        <p class="sbrutalist-p">This page demonstrates the standalone <strong>sbrutalist.css</strong> framework. It shows all core UI components of the CSVCHUNK design language in action without relying on external libraries like Bulma.</p>
-        
-        <div class="component-section">
-            <h2 class="sbrutalist-h2">1. Typography & Badges</h2>
-            <h1 class="sbrutalist-h1">This is an H1 Header <span class="sbrutalist-badge-pro">PRO</span></h1>
-            <p class="sbrutalist-p">This is standard paragraph text. It's bold enough to be highly legible but not as heavy as the headers. High contrast is key.</p>
+        <!-- Header -->
+        <div style="margin-bottom: 48px;">
+            <div style="margin-bottom: 12px;">
+                <span class="sbrutalist-badge sbrutalist-badge-invert">FRAMEWORK v0.2.0</span>
+                <span class="sbrutalist-badge">100% ZERO-DEPENDENCY</span>
+                <span class="sbrutalist-badge">PURE HTML5 + CSS3</span>
+            </div>
+            <h1 class="sbrutalist-h1" style="font-size: 3.2rem; line-height: 1.1;">Schultz Brutalist UI</h1>
+            <p class="sbrutalist-p" style="font-size: 1.25rem; font-weight: 700; line-height: 1.5;">
+                Ein kompromissloses CSS-Framework für technische Entwickler-Werkzeuge. Scharfe 90-Grad-Winkel, massive Blockschatten, System-Monospace-Typografie und spürbare physische Haptik &mdash; <strong>ohne jegliche externe Abhängigkeiten</strong> (kein JavaScript, kein NPM, keine Google Fonts, keine externen Icons).
+            </p>
         </div>
 
+        <!-- 1. Principle: Technical Blueprint Grid -->
         <div class="component-section">
-            <h2 class="sbrutalist-h2">2. The Brutalist Box</h2>
+            <span class="principle-tag">Design-Prinzip #1 &middot; Architectural Blueprint Grid (Zero-Dep CSS Grid)</span>
+            <h2 class="sbrutalist-h2">1. Technisches Konstruktionsraster (Blueprint Grid)</h2>
+            <p class="sbrutalist-p">
+                <strong>Idee &amp; Nutzen:</strong> Entwickler- und Ingenieurs-Webseiten verbergen ihr Gestaltungsraster nicht hinter willkürlichem Weißraum, sondern betonen die technische Präzision durch ein dezentes 24px-Konstruktionsraster (Millimeterpapier / CAD-Workstation).
+            </p>
             <div class="sbrutalist-box">
-                <h2 class="sbrutalist-h2">Container Element</h2>
-                <p class="sbrutalist-p">Notice the thick black borders and the hard, solid black drop shadow. No blur radius is used anywhere in this design.</p>
+                <p class="sbrutalist-p" style="margin-bottom: 0;">
+                    <strong>Zero-Dependency:</strong> Reines CSS3 <code>linear-gradient</code>. Keine Hintergrundgrafiken, keine SVG-Assets, keine externen Requests.
+                </p>
             </div>
+            <code class="code-block">&lt;body class="sbrutalist-blueprint-bg"&gt; ... &lt;/body&gt;</code>
         </div>
 
+        <!-- 2. Principle: Code Brutalism & Technical Mono -->
         <div class="component-section">
-            <h2 class="sbrutalist-h2">3. Buttons & Interaction</h2>
-            <p class="sbrutalist-p">Hover over these buttons to see the mechanical "push" effect and color inversion.</p>
-            <button class="sbrutalist-btn-primary">Primary Action</button>
-            <button class="sbrutalist-btn-secondary" style="margin-left: 10px;">Secondary Action</button>
-        </div>
-
-        <div class="component-section">
-            <h2 class="sbrutalist-h2">4. Forms & Inputs</h2>
-            <label class="sbrutalist-label">Username <span class="sbrutalist-badge-pro">PRO</span></label>
-            <input type="text" class="sbrutalist-input" placeholder="Enter your username...">
+            <span class="principle-tag">Design-Prinzip #2 &middot; Code Brutalism &amp; Technical Mono (Native System Fonts)</span>
+            <h2 class="sbrutalist-h2">2. Terminal-Komponente (CLI &amp; TUI Vorschau)</h2>
+            <p class="sbrutalist-p">
+                <strong>Idee &amp; Nutzen:</strong> Statt austauschbarer Screenshots oder bunter Illustrationen steht das echte Terminal im Zentrum. Tiefe Schwarztöne (<code>#050505</code>), Unix-Fensterpunkte und Monospace-Typografie vermitteln unmittelbare Authentizität.
+            </p>
+            <p class="sbrutalist-p">
+                <strong>Zero-Dependency:</strong> Verwendet den nativen System-Monospace-Stack (<code>ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas</code>) &mdash; kein Download externer Webfonts erforderlich. Fensterpunkte sind reine CSS-Shapes.
+            </p>
             
-            <label class="sbrutalist-label">Select Option</label>
-            <select class="sbrutalist-input">
-                <option>Option 1 - Row Count</option>
-                <option>Option 2 - File Size</option>
-            </select>
+            <div class="sbrutalist-terminal">
+                <div class="sbrutalist-terminal-header" style="justify-content: space-between;">
+                    <div style="display: flex; align-items: center;">
+                        <div class="sbrutalist-terminal-dots">
+                            <span class="sbrutalist-terminal-dot"></span>
+                            <span class="sbrutalist-terminal-dot"></span>
+                            <span class="sbrutalist-terminal-dot"></span>
+                        </div>
+                        <span>bash &mdash; tablemock (Live Streaming)</span>
+                    </div>
+                    <button class="sbrutalist-copy-btn">COPY</button>
+                </div>
+                <div class="sbrutalist-terminal-body">
+<pre><span class="sbrutalist-terminal-prompt">$</span> tablemock -p users -r 10000 --seed 42 -o users.csv
+🚀 Starting generation of 10000 rows into 'users.csv'...
+✅ Successfully generated 10000 rows
+📦 File saved to: users.csv
+
+<span class="sbrutalist-terminal-prompt">$</span> head -n 3 users.csv
+user_id,name,age,country,is_active,signup_date
+USR_1,Margaret Thomas,64,DE,true,2023-08-01
+USR_2,Lisa Rodriguez,30,DK,false,2023-12-22</pre>
+                </div>
+            </div>
+
+            <code class="code-block">&lt;div class="sbrutalist-terminal"&gt;
+    &lt;div class="sbrutalist-terminal-header"&gt;...&lt;/div&gt;
+    &lt;div class="sbrutalist-terminal-body"&gt;&lt;pre&gt;...&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;</code>
         </div>
 
+        <!-- 3. Principle: Tactile Brutalism & Mechanical Keycaps -->
         <div class="component-section">
-            <h2 class="sbrutalist-h2">5. Dropzone</h2>
-            <div class="sbrutalist-dropzone">
-                Drag & Drop CSV File Here
-                <div style="font-size: 0.8rem; margin-top: 10px; font-weight: 500;">Or click to browse</div>
+            <span class="principle-tag">Design-Prinzip #3 &middot; Hardware Haptics &amp; Mechanical Keycaps (Native &lt;kbd&gt;)</span>
+            <h2 class="sbrutalist-h2">3. Mechanische Tastenkappen (Keycaps)</h2>
+            <p class="sbrutalist-p">
+                <strong>Idee &amp; Nutzen:</strong> Terminal-Tools (CLI &amp; TUI) leben von Tastaturkürzeln. Die <code>&lt;kbd&gt;</code>-Elemente simulieren die physische Haptik mechanischer Tastaturschalter mit 2px-Rahmen und 2px-Festschatten.
+            </p>
+            <p class="sbrutalist-p">
+                <strong>Zero-Dependency:</strong> Verwendet das native HTML-Standardelement <code>&lt;kbd&gt;</code> ohne Icon-Packs oder Hilfs-Skripte.
+            </p>
+            <div class="sbrutalist-box">
+                <p class="sbrutalist-p" style="margin-bottom: 0;">
+                    Tastenbelegung: 
+                    <kbd class="sbrutalist-kbd">Enter</kbd> Ausführen &nbsp;&middot;&nbsp; 
+                    <kbd class="sbrutalist-kbd">+</kbd> Spalte hinzufügen &nbsp;&middot;&nbsp; 
+                    <kbd class="sbrutalist-kbd">-</kbd> Entfernen &nbsp;&middot;&nbsp; 
+                    <kbd class="sbrutalist-kbd">t</kbd> Datentyp &nbsp;&middot;&nbsp; 
+                    <kbd class="sbrutalist-kbd">s</kbd> Trennzeichen &nbsp;&middot;&nbsp; 
+                    <kbd class="sbrutalist-kbd">q</kbd> Beenden
+                </p>
+            </div>
+            <code class="code-block">&lt;kbd class="sbrutalist-kbd"&gt;Enter&lt;/kbd&gt;
+&lt;kbd class="sbrutalist-kbd"&gt;+&lt;/kbd&gt;</code>
+        </div>
+
+        <!-- 4. Principle: Engineering Readouts & Telemetry Badges -->
+        <div class="component-section">
+            <span class="principle-tag">Design-Prinzip #4 &middot; Engineering Readouts &amp; Telemetry (Zero-Icon CSS)</span>
+            <h2 class="sbrutalist-h2">4. Status-Pills &amp; Technische Spezifikations-Badges</h2>
+            <p class="sbrutalist-p">
+                <strong>Idee &amp; Nutzen:</strong> Klare technische Indikatoren signalisieren Architektur, Betriebsmodus und Systemstatus auf einen Blick.
+            </p>
+            <p class="sbrutalist-p">
+                <strong>Zero-Dependency:</strong> Status-Punkte sind reine 8px CSS-Kreise (<code>.status-dot</code>). Keine externen Icon-Bibliotheken wie FontAwesome, Lucide oder SVG-Dateien nötig.
+            </p>
+            <div>
+                <span class="sbrutalist-spec-pill"><span class="status-dot"></span>ENGINE: RUST</span>
+                <span class="sbrutalist-spec-pill"><span class="status-dot"></span>BINARY: STATIC MUSL</span>
+                <span class="sbrutalist-spec-pill"><span class="status-dot"></span>MODE: OFFLINE-FIRST</span>
+                <span class="sbrutalist-spec-pill"><span class="status-dot"></span>DEPS: ZERO</span>
+            </div>
+            <div style="margin-top: 16px;">
+                <span class="sbrutalist-badge">CLI + TUI</span>
+                <span class="sbrutalist-badge sbrutalist-badge-invert">CLI + REST API</span>
+                <span class="sbrutalist-badge sbrutalist-badge-pro">PRO EDITION</span>
             </div>
         </div>
 
+        <!-- 5. Principle: Hard Offset Shadows & Push Interaction -->
         <div class="component-section">
-            <h2 class="sbrutalist-h2">6. Alerts</h2>
-            <div class="sbrutalist-alert-danger">
-                Warning: The uploaded file exceeds the 500 MB limit of the free tier.
+            <span class="principle-tag">Design-Prinzip #5 &middot; Tactile Brutalism &amp; Solid Push (Pure CSS3 Transitions)</span>
+            <h2 class="sbrutalist-h2">5. Brutalist Boxen &amp; Interaktive Buttons</h2>
+            <p class="sbrutalist-p">
+                <strong>Idee &amp; Nutzen:</strong> Buttons reagieren mit einer physischen Druckbewegung (<code>transform: translate(2px, 2px)</code>), bei der der massive Schatten verschwindet. Das vermittelt ein direktes mechanisches Feedback.
+            </p>
+            <p class="sbrutalist-p">
+                <strong>Zero-Dependency:</strong> Reines CSS <code>:hover</code> und <code>:active</code>. Keine Animations-Bibliotheken (GSAP, Framer Motion, jQuery) erforderlich.
+            </p>
+            
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;">
+                <button class="sbrutalist-btn-black">Black Button (Primary)</button>
+                <button class="sbrutalist-btn-primary">Green Accent Button</button>
+                <button class="sbrutalist-btn-secondary">Secondary White</button>
+            </div>
+
+            <div class="sbrutalist-box">
+                <h3 class="sbrutalist-h2" style="font-size: 1.5rem;">Massive Brutalist Box</h3>
+                <p class="sbrutalist-p" style="margin-bottom: 0;">
+                    2px solider schwarzer Rahmen, 6px massiver schwarzer Schatten (<code>box-shadow: 6px 6px 0px #000;</code>). Keine Verläufe, kein Weichzeichner.
+                </p>
             </div>
         </div>
 
+        <!-- 6. Principle: B2B Pricing Architecture -->
         <div class="component-section">
-            <h2 class="sbrutalist-h2">7. Responsive Grids</h2>
-            <p class="sbrutalist-p">Grids automatically lay out items in columns on desktop and collapse cleanly into 1 column below 768px width.</p>
+            <span class="principle-tag">Design-Prinzip #6 &middot; High-Converting B2B Pricing Architecture</span>
+            <h2 class="sbrutalist-h2">6. Preistafeln &amp; Lizenz-Karten</h2>
+            <p class="sbrutalist-p">
+                <strong>Idee &amp; Nutzen:</strong> Klare Gegenüberstellung von kostenloser Basis-Edition (Trial) und kommerzieller Pro-Lizenz (Einmalkauf / Perpetual) ohne Abo-Fallen.
+            </p>
+            <p class="sbrutalist-p">
+                <strong>Zero-Dependency:</strong> Reine semantische HTML-Listen (<code>&lt;ul&gt;</code>) und native Links (<code>&lt;a href="..."&gt;</code>) &mdash; kein dynamisches Pricing-Script nötig.
+            </p>
+
             <div class="sbrutalist-grid-2">
-                <div class="sbrutalist-box">
-                    <h3 class="sbrutalist-h3">Column 1</h3>
-                    <p class="sbrutalist-p" style="margin-bottom: 0;">Grid box content left.</p>
+                <div class="sbrutalist-pricing-card">
+                    <div>
+                        <span class="sbrutalist-badge">KOSTENLOS</span>
+                        <h3 class="sbrutalist-h2" style="font-size: 1.6rem; margin: 8px 0;">BASIS-EDITION</h3>
+                        <div class="sbrutalist-price-tag">0 €</div>
+                        <div class="sbrutalist-price-sub">Kostenlose Testversion</div>
+                        <ul class="sbrutalist-feature-list">
+                            <li><span class="bullet">✓</span><div class="feature-text">Bis zu 1.000 Zeilen pro Durchlauf</div></li>
+                            <li><span class="bullet">✓</span><div class="feature-text">Interaktive TUI mit Live-Vorschau</div></li>
+                            <li><span class="bullet">✓</span><div class="feature-text">Statisches Single Binary</div></li>
+                        </ul>
+                    </div>
+                    <button class="sbrutalist-btn-secondary" style="width: 100%;">Download Basis</button>
                 </div>
-                <div class="sbrutalist-box">
-                    <h3 class="sbrutalist-h3">Column 2</h3>
-                    <p class="sbrutalist-p" style="margin-bottom: 0;">Grid box content right.</p>
+
+                <div class="sbrutalist-pricing-card featured" style="border-width: 3px;">
+                    <div>
+                        <span class="sbrutalist-badge sbrutalist-badge-invert">PRO 69 €</span>
+                        <h3 class="sbrutalist-h2" style="font-size: 1.6rem; margin: 8px 0;">PRO-EDITION</h3>
+                        <div class="sbrutalist-price-tag">69 €</div>
+                        <div class="sbrutalist-price-sub">Einmalzahlung (Lifetime Lizenz)</div>
+                        <ul class="sbrutalist-feature-list">
+                            <li><span class="bullet">✓</span><div class="feature-text"><strong>Unbegrenzte Zeilen &amp; Spalten</strong></div></li>
+                            <li><span class="bullet">✓</span><div class="feature-text"><strong>Determinismus mit --seed</strong></div></li>
+                            <li><span class="bullet">✓</span><div class="feature-text"><strong>JSON Recipe Workflow für CI/CD</strong></div></li>
+                            <li><span class="bullet">✓</span><div class="feature-text"><strong>Kommerzielle Entwickler-Lizenz</strong></div></li>
+                        </ul>
+                    </div>
+                    <button class="sbrutalist-btn-black" style="width: 100%;">Pro-Lizenz kaufen &rarr;</button>
                 </div>
             </div>
+        </div>
+
+        <!-- 7. Spec Tables -->
+        <div class="component-section">
+            <span class="principle-tag">Design-Prinzip #7 &middot; High-Contrast Comparison Tables (Native HTML Table)</span>
+            <h2 class="sbrutalist-h2">7. Technische Vergleichstabellen</h2>
+            <p class="sbrutalist-p">
+                <strong>Zero-Dependency:</strong> Reines semantisches <code>&lt;table&gt;</code> ohne JavaScript-Table-Libraries (wie DataTables, AG-Grid oder Tabulator).
+            </p>
+            
+            <table class="sbrutalist-table">
+                <thead>
+                    <tr>
+                        <th>Funktion</th>
+                        <th>Basis-Edition</th>
+                        <th style="background-color: #222;">Pro-Edition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Zeilenbegrenzung</strong></td>
+                        <td>1.000 Zeilen</td>
+                        <td><strong>Unbegrenzt</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Formate</strong></td>
+                        <td>CSV</td>
+                        <td><strong>CSV &amp; TSV</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kommerzielle Nutzung</strong></td>
+                        <td>Nur Evaluierung</td>
+                        <td><strong>Vollumfänglich lizenziert</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 8. Forms & Inputs -->
+        <div class="component-section">
+            <h2 class="sbrutalist-h2">8. Formulare &amp; Eingabefelder</h2>
+            <label class="sbrutalist-label">Lizenzschlüssel eingeben</label>
+            <input type="text" class="sbrutalist-input" placeholder="TM-PRO-XXXX-XXXX-XXXX">
+            
+            <div class="sbrutalist-dropzone">
+                CSV-Datei hier ablegen
+                <div style="font-size: 0.85rem; margin-top: 8px; font-weight: 500;">Oder klicken zum Auswählen</div>
+            </div>
+        </div>
+
+        <!-- 9. Disabled & Coming Soon States -->
+        <div class="component-section">
+            <span class="principle-tag">Design-Prinzip #9 &middot; Disabled &amp; Coming-Soon States (Pure CSS Pointer-Events)</span>
+            <h2 class="sbrutalist-h2">9. Deaktivierte Produkte &amp; Coming-Soon Status</h2>
+            <p class="sbrutalist-p">
+                <strong>Idee &amp; Nutzen:</strong> Produkte, die sich noch vor dem Release befinden (z. B. <code>CSVREPORT_ACTIVE = false</code>), werden über <code>.sbrutalist-disabled</code> ausgegraut und für Klicks gesperrt (<code>pointer-events: none</code>).
+            </p>
+            <div class="sbrutalist-box sbrutalist-disabled" style="margin-bottom: 16px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <span class="sbrutalist-badge sbrutalist-badge-invert">CLI + REST API</span>
+                    <span class="sbrutalist-badge sbrutalist-badge-disabled">COMING SOON</span>
+                </div>
+                <h3 class="sbrutalist-h2" style="font-size: 1.6rem; margin-bottom: 8px;">CSVREPORT</h3>
+                <p class="sbrutalist-p" style="margin-bottom: 16px;">
+                    Precision engine for deep data profiling, schema validation, and consistency reporting.
+                </p>
+                <span class="sbrutalist-btn-disabled">Coming Soon</span>
+            </div>
+            <code class="code-block">&lt;div class="sbrutalist-box sbrutalist-disabled"&gt;
+    &lt;span class="sbrutalist-badge sbrutalist-badge-disabled"&gt;COMING SOON&lt;/span&gt;
+    &lt;span class="sbrutalist-btn-disabled"&gt;Coming Soon&lt;/span&gt;
+&lt;/div&gt;</code>
         </div>
 
     </div>
